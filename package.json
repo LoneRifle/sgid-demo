@@ -3,9 +3,12 @@
   "version": "0.5.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev:mockpass": "SHOW_LOGIN_PAGE=true mockpass",
+    "dev:next": "next dev",
+    "dev": "concurrently -c blue,green npm:dev:*",
     "build": "next build",
-    "export": "next export"
+    "export": "next export",
+    "start": "next start"
   },
   "dependencies": {
     "@opengovsg/sgid-client": "^1.0.4",
@@ -17,6 +20,7 @@
     "react-dom": "^18.0.0"
   },
   "devDependencies": {
-    "@opengovsg/mockpass": "^3.1.1"
+    "@opengovsg/mockpass": "^3.1.1",
+    "concurrently": "^8.0.1"
   }
 }
