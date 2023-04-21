@@ -14,7 +14,7 @@ export default function Home() {
 
       <main>
         <Header title={title} />
-        <a className="login" href="/api/authorize?landingUrl=/api/whoami">
+        <a className="login" href="/api/authorize?landingUrl=/me">
           <div>
             Login using sgID
           </div>

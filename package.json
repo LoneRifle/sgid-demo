@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "@opengovsg/sgid-client": "^1.0.4",
+    "@tanstack/react-query": "^4.29.3",
     "cypress": "^10.0.3",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
