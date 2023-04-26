@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import Link from 'next/link'
 
 const title = 'sgID demo'
 
@@ -14,11 +15,9 @@ export default function Home() {
 
       <main>
         <Header title={title} />
-        <a className="login" href="/api/authorize?landingUrl=/me">
-          <div>
-            Login using sgID
-          </div>
-        </a>
+        <Link href="/api/authorize?landingUrl=/me">
+          <div className="login">Login using sgID</div>
+        </Link>
       </main>
 
       <Footer />
