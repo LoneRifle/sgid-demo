@@ -6,10 +6,10 @@ const secret = process.env.SESSION_SECRET || 'toomanysecrets'
 
 const sessionOptions = {
   secret,
-  cookie: { 
-    maxAge: 4 * 3600 * 1000, 
-    secure: false, 
-    httpOnly: true 
+  cookie: {
+    maxAge: 4 * 3600 * 1000,
+    secure: false,
+    httpOnly: true,
   },
   resave: false,
   saveUninitialized: true,

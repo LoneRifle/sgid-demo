@@ -1,9 +1,9 @@
-import express from "express";
+import express from 'express'
 
-const whoami = express();
+const whoami = express()
 
-whoami.get("/", (req, res) => {
-  res.json(req.session.sgid || {});
-});
+whoami.get('/', (req, res) => {
+  res.json(req.session.sgid || {})
+})
 
-export default whoami;
+export default whoami

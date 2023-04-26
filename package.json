@@ -8,7 +8,9 @@
     "dev": "concurrently -c blue,green npm:dev:*",
     "build": "next build",
     "export": "next export",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@opengovsg/sgid-client": "^1.0.4",
@@ -27,6 +29,10 @@
     "@types/node": "^18.16.0",
     "@types/react": "^18.2.0",
     "concurrently": "^8.0.1",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "eslint-config-prettier": "^8.8.0",
+    "prettier": "^2.8.8",
     "typescript": "^5.0.4"
   }
 }

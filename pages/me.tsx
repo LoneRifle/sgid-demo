@@ -1,15 +1,16 @@
-import Head from "next/head";
-import Header from "@components/Header";
-import Footer from "@components/Footer";
-import { useQuery } from "@tanstack/react-query";
+import Head from 'next/head'
+import Header from '@components/Header'
+import Footer from '@components/Footer'
+import { useQuery } from '@tanstack/react-query'
+import Link from 'next/link'
 
-const title = "Your Profile";
+const title = 'Your Profile'
 
 export default function Home() {
-  const { data, isLoading, isError } = useQuery(["whoami"], async () => {
-    const response = await fetch("/api/whoami", { credentials: "same-origin" });
-    return response.json();
-  });
+  const { data, isLoading, isError } = useQuery(['whoami'], async () => {
+    const response = await fetch('/api/whoami', { credentials: 'same-origin' })
+    return response.json()
+  })
 
   return (
     <div className="container">
@@ -38,12 +39,12 @@ export default function Home() {
         ) : (
           <div>You are not logged in! Click the button below to do so.</div>
         )}
-        <a className="login" href="/api/authorize/logout">
+        <Link className="login" href="/api/authorize/logout">
           <div>Logout and Start Again</div>
-        </a>
+        </Link>
       </main>
 
       <Footer />
     </div>
-  );
+  )
 }
