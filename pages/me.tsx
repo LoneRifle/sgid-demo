@@ -39,8 +39,8 @@ export default function Home() {
         ) : (
           <div>You are not logged in! Click the button below to do so.</div>
         )}
-        <Link className="login" href="/api/authorize/logout">
-          <div>Logout and Start Again</div>
+        <Link href="/api/authorize/logout">
+          <div className="login">Logout and Start Again</div>
         </Link>
       </main>
 
